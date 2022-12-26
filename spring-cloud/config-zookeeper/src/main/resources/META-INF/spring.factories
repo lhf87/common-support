@@ -1,0 +1,7 @@
+# Auto Configuration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.lhf.common.spring.extension.config.zookeeper.ZookeeperConfigAutoConfiguration
+
+# Bootstrap Configuration
+org.springframework.cloud.bootstrap.BootstrapConfiguration=\
+com.lhf.common.spring.extension.config.zookeeper.ZookeeperConfigBootstrapConfiguration

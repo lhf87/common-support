@@ -24,5 +24,7 @@
     <modules>
         <module>convert</module>
         <module>utils</module>
+        <module>spring</module>
+        <module>spring-cloud</module>
     </modules>
 </project>

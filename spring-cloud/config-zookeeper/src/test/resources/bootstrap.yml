@@ -1,0 +1,49 @@
+# 自定义配置
+integration:
+  namespace:
+    route-config: route-config
+    integration-api: integration-api
+    brand-cache-key-prefix: 'loyalty:crm:integration:brand:'
+    white-api: white-api
+
+
+# spring配置
+spring:
+  application:
+    name: gateway-server
+  profiles:
+    active: ${profile.active}
+  cloud:
+    zookeeper:
+      connectString: dev.zk1.cnhz.xxx.com:2181,dev.zk2.cnhz.xxx.com:2181,dev.zk3.cnhz.xxx.com:2181
+      # 下面配置来自spring-cloud-extension扩展包
+      keruyun:
+        loyalty:
+          config:
+            root: /configurations/on_xxxx/${profile.active}
+            includes: ${integration.namespace.route-config},${integration.namespace.integration-api},${integration.namespace.white-api}
+            contextSeparator: ':'
+            watcher:
+              enabled: true
+              contexts: ${integration.namespace.route-config},${integration.namespace.integration-api},${integration.namespace.white-api}
+
+
+# 各种环境配置
+---
+spring:
+  profiles: citest
+  cloud:
+    zookeeper:
+      connectString: ci.zk1.cnhz.xxx.com:2181,ci.zk1.cnhz.xxx.com:2181,ci.zk1.cnhz.xxx.com:2181
+---
+spring:
+  profiles: gld
+  cloud:
+    zookeeper:
+      connectString: gld.zk1.cnhz.xxx.com:2181,gld.zk2.cnhz.xxx.com:2181,gld.zk3.cnhz.xxx.com:2181
+---
+spring:
+  profiles: vpcprod
+  cloud:
+    zookeeper:
+      connectString: vpcprod.zk1.cnhz.xxx.com:2181,vpcprod.zk2.cnhz.xxx.com:2181,vpcprod.zk3.cnhz.xxx.com:2181

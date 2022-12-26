@@ -1,0 +1,51 @@
+//{
+//  "groups": [
+//    {
+//      "name": "spring.cloud.zookeeper.keruyun.loyalty.config",
+//      "type": "com.keruyun.loyalty.config.zookeeper.ZookeeperConfigProperties",
+//      "sourceType": "com.keruyun.loyalty.config.zookeeper.ZookeeperConfigProperties"
+//    }
+//  ],
+//  "properties": [
+//    {
+//      "name": "spring.cloud.zookeeper.keruyun.loyalty.config.root",
+//      "type": "java.lang.String",
+//      "description": "Root folder where the configuration for Zookeeper is kept",
+//      "sourceType": "com.keruyun.loyalty.config.zookeeper.ZookeeperConfigProperties",
+//      "defaultValue": "config"
+//    },
+//    {
+//      "name": "spring.cloud.zookeeper.keruyun.loyalty.config.commonContext",
+//      "type": "java.lang.String",
+//      "description": "公共配置config-context",
+//      "sourceType": "com.keruyun.loyalty.config.zookeeper.ZookeeperConfigProperties"
+//    },
+//    {
+//      "name": "spring.cloud.zookeeper.keruyun.loyalty.config.includes",
+//      "type": "java.lang.String",
+//      "description": "以profileSeparator分割的子config-context",
+//      "sourceType": "com.keruyun.loyalty.config.zookeeper.ZookeeperConfigProperties"
+//    },
+//    {
+//      "name": "spring.cloud.zookeeper.keruyun.loyalty.config.contextSeparator",
+//      "type": "java.lang.String",
+//      "description": "子context分割符",
+//      "sourceType": "com.keruyun.loyalty.config.zookeeper.ZookeeperConfigProperties",
+//      "defaultValue": ","
+//    },
+//    {
+//      "name": "spring.cloud.zookeeper.keruyun.loyalty.config.watcher.enabled",
+//      "type": "java.lang.Boolean",
+//      "description": "是否监听节点变化",
+//      "sourceType": "com.keruyun.loyalty.config.zookeeper.ZookeeperConfigProperties"
+//    },
+//    {
+//      "name": "spring.cloud.zookeeper.keruyun.loyalty.config.watcher.contexts",
+//      "type": "java.lang.String",
+//      "description": "watcher监听的context",
+//      "sourceType": "com.keruyun.loyalty.config.zookeeper.ZookeeperConfigProperties",
+//      "defaultValue": "*"
+//    }
+//  ],
+//  "hints": []
+//}
